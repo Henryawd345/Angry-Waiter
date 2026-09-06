@@ -1,0 +1,39 @@
+# Normalise line endings; let Git decide what is text.
+* text=auto
+
+# Unity YAML assets: keep as text and use Unity's smart merge (UnityYAMLMerge)
+*.unity      text merge=unityyamlmerge eol=lf
+*.prefab     text merge=unityyamlmerge eol=lf
+*.asset      text merge=unityyamlmerge eol=lf
+*.mat        text merge=unityyamlmerge eol=lf
+*.anim       text merge=unityyamlmerge eol=lf
+*.controller text merge=unityyamlmerge eol=lf
+*.overrideController text merge=unityyamlmerge eol=lf
+*.physicMaterial     text merge=unityyamlmerge eol=lf
+*.physicsMaterial2D  text merge=unityyamlmerge eol=lf
+*.meta       text merge=unityyamlmerge eol=lf
+*.cs         text diff=csharp eol=lf
+
+# Binary asset types - never diff or merge these
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.psd  binary
+*.tga  binary
+*.tif  binary
+*.exr  binary
+*.hdr  binary
+*.fbx  binary
+*.obj  binary
+*.blend binary
+*.wav  binary
+*.mp3  binary
+*.ogg  binary
+*.mp4  binary
+*.ttf  binary
+*.otf  binary
+*.dll  binary
+*.so   binary
+*.dylib binary
+*.unitypackage binary
