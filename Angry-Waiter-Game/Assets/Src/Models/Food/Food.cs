@@ -27,6 +27,6 @@ public class Food : MonoBehaviour
     {
         // will debug later
         if (true) isHighLight = true;
-        else isHighLight = false;
+        // else isHighLight = false;
     }
 }

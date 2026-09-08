@@ -2,13 +2,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    CharacterController characterController;
+    private LevelManager levelManager;
+
+
+    private CharacterController characterController;
 
 
 
-    PlayerMovement movement;
-    PlayerServing serving;
-    PlayerCombat combat;
+    private PlayerMovement movement;
+    private PlayerServing serving;
+    private PlayerCombat combat;
 
     void Awake()
     {
@@ -18,9 +21,16 @@ public class Player : MonoBehaviour
         serving = new PlayerServing();
         combat = new PlayerCombat();
     }
+    void Start()
+    {
+        levelManager = LevelManager.instance;
+    }
 
     void Update()
     {
+        if (levelManager.isPaused)
+            return;
+
         movement.Update();
         serving.Update();
         combat.Update();

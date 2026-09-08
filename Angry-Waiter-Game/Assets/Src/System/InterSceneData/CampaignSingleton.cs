@@ -7,4 +7,9 @@ public class CampaignSingleton : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
     }
+
+    public void changeTotalMoneyBy(float money)
+    {
+        this.money = money;
+    }
 }

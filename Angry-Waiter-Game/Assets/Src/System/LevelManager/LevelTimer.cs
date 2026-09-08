@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LevelTimer : MonoBehaviour
+public class LevelTimer
 {
     private LevelManager levelManager;
 
