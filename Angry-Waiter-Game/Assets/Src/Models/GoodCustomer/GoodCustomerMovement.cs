@@ -16,6 +16,7 @@ public class GoodCustomerMovement
     {
         goodCustomer.arriveAtTable();
     }
+
     public void moveToExit()
     {
         

@@ -17,6 +17,7 @@ public static class InputHandler
         act.hit1         => MapInput.hit1Key,
         act.hit2         => MapInput.hit2Key,
         act.interact     => MapInput.interactKey,
+        act.throws       => MapInput.throwKey,
         _                => KeyCode.None
     };
 }

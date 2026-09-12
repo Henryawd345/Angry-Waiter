@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
 
     private CharacterController characterController;
 
+    private GameObject foodInventory;
+    private GameObject playerHand;
+
 
 
     private PlayerMovement movement;
@@ -16,9 +19,11 @@ public class Player : MonoBehaviour
     void Awake()
     {
         characterController = gameObject.GetComponent<CharacterController>();
+        foodInventory = transform.Find("FoodInventory").transform.gameObject;
+        playerHand = transform.Find("Hand").transform.gameObject;
 
         movement = new PlayerMovement(characterController, transform);
-        serving = new PlayerServing();
+        serving = new PlayerServing(foodInventory, playerHand);
         combat = new PlayerCombat();
     }
     void Start()

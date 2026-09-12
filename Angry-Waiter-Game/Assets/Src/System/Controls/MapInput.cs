@@ -16,7 +16,8 @@ public enum act
     hit2,
 
 
-    interact
+    interact,
+    throws
 }
 public class MapInput
 {
@@ -36,4 +37,6 @@ public class MapInput
 
     // Action control buttons
     public static readonly KeyCode interactKey = KeyCode.E;
+    public static readonly KeyCode throwKey = KeyCode.Q;
+
 }
